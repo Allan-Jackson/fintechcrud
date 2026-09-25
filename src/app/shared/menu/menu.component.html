@@ -4,13 +4,13 @@
             <a class="navbar-logo" href="/">Fintech CRUD</a>
             <ul class="navbar-list">
                 @for(item of itensMenu; track item) {
-                    <li><a [href]="item.link">{{item.label}}</a></li>
+                    <li><a [routerLink]="item.link">{{item.label}}</a></li>
                 }
             </ul>
         </div>
         <div class="navbar-acoes">
-            <a href="ajuda">Ajuda</a>
-            <a href="login">Login</a>
+            <a routerLink="/ajuda">Ajuda</a>
+            <a routerLink="/login">Login</a>
         </div>
     </div>
 </nav>
