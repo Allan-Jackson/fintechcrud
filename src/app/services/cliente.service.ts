@@ -11,7 +11,7 @@ export class ClienteService {
   listar(): Cliente[] {
     return [
       {
-        id: 1,
+        id: "1",
         cpf: "12345678910",
         nome: "Enzo",
         sobrenome: "Silva",
@@ -19,7 +19,7 @@ export class ClienteService {
         email: ""
       },
       {
-        id: 2,
+        id: "2",
         cpf: "10987654321",
         nome: "Valentina",
         sobrenome: "Campos",

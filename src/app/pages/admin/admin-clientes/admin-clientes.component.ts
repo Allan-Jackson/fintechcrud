@@ -17,10 +17,10 @@ export class AdminClientesComponent implements OnInit {
     this.listaClientes = this.service.listar();
   }
 
-  editar(id: number | undefined) {
+  editar(id: string) {
     console.log('Editar cliente:', id);
   }
-  excluir(id: number | undefined) {
+  excluir(id: string) {
     console.log('Excluir cliente:', id);
   }
 
