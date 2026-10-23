@@ -3,6 +3,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { AjudaComponent } from './pages/ajuda/ajuda.component';
+import { AdminClientesComponent } from './pages/admin/admin-clientes/admin-clientes.component';
+
 
 export const routes: Routes = [
     {
@@ -24,5 +26,10 @@ export const routes: Routes = [
         path: 'ajuda',
         component: AjudaComponent,
         title: 'Ajuda'
+    },
+    {
+        path: 'admin-clientes-listar',
+        component: AdminClientesComponent,
+        title: 'Listar Clientes'
     }
 ];
