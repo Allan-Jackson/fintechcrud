@@ -1,34 +1,27 @@
-import { Component } from '@angular/core';
-
+import { Component, inject, OnInit } from '@angular/core';
+import { ClienteService } from '../../../services/cliente.service';
+import { Cliente } from '../../../model/cliente';
 @Component({
   selector: 'app-admin-clientes',
+  standalone: true,
   imports: [],
   templateUrl: './admin-clientes.component.html',
   styleUrl: './admin-clientes.component.css'
 })
-export class AdminClientesComponent {
-  
-  listaClientes = [
-    {
-      id: 1,
-      nome: 'Enzo',
-      sobrenome: 'Silva',
-      dataNascimento: '10/01/2005'
-    },
-    {
-      id: 2,
-      nome: 'Valentina',
-      sobrenome: 'Guimaraes',
-      dataNascimento: '14/08/2007'
-    }
-  ];
+export class AdminClientesComponent implements OnInit {
+  private service = inject(ClienteService);
 
-  editar(id: number) {
+  listaClientes: Cliente[] = [];
+
+  ngOnInit(): void {
+    this.listaClientes = this.service.listar();
+  }
+
+  editar(id: number | undefined) {
     console.log('Editar cliente:', id);
   }
-
-  excluir(id: number) {
+  excluir(id: number | undefined) {
     console.log('Excluir cliente:', id);
   }
-  
+
 }
