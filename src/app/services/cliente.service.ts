@@ -1,5 +1,8 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Cliente } from '../model/cliente';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,24 +11,18 @@ export class ClienteService {
 
   constructor() { }
 
-  listar(): Cliente[] {
-    return [
-      {
-        id: "1",
-        cpf: "12345678910",
-        nome: "Enzo",
-        sobrenome: "Silva",
-        dataNascimento: "2005-01-10",
-        email: ""
-      },
-      {
-        id: "2",
-        cpf: "10987654321",
-        nome: "Valentina",
-        sobrenome: "Campos",
-        dataNascimento: "2007-08-14",
-        email: ""
-      },
-    ];
+  private httpClient = inject(HttpClient);
+  private readonly API = "http://localhost:3000/clientes";
+
+  listar(): Observable<Cliente[]> {
+    return this.httpClient.get<Cliente[]>(this.API);
+  }
+
+  incluir(cliente: Cliente): Observable<Cliente> {
+    return this.httpClient.post<Cliente>(this.API, cliente);
+  }
+
+  excluir(id: string): Observable<void> {
+    return this.httpClient.delete<void>(`${this.API}/${id}`);
   }
 }

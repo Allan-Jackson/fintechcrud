@@ -1,28 +1,20 @@
 {
-    "clientes": [
-        {
-            "id": "1",
-            "cpf": "12345678910",
-            "nome": "Enzo",
-            "sobrenome": "Silva",
-            "dtNascimento": "2005-01-10",
-            "email": "enzo@email.com"
-        },
-        {
-            "id": "2",
-            "cpf": "12345678911",
-            "nome": "Ana",
-            "sobrenome": "Santos",
-            "dtNascimento": "2000-09-09",
-            "email": "ana@email.com"
-        },
-        {
-            "id": "3",
-            "cpf": "22345678913",
-            "nome": "Matheus",
-            "sobrenome": "Vieira",
-            "dtNascimento": "2003-08-19",
-            "email": "math.vieira@email.com"
-        }
-    ]
+  "clientes": [
+    {
+      "id": "2",
+      "cpf": "12345678911",
+      "nome": "Ana",
+      "sobrenome": "Santos",
+      "dtNascimento": "2000-09-09",
+      "email": "ana@email.com"
+    },
+    {
+      "id": "3",
+      "cpf": "22345678913",
+      "nome": "Matheus",
+      "sobrenome": "Vieira",
+      "dtNascimento": "2003-08-19",
+      "email": "math.vieira@email.com"
+    }
+  ]
 }
