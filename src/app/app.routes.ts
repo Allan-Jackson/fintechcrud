@@ -14,7 +14,7 @@ export const routes: Routes = [
         title: 'Home'
     },
     {
-        path: 'login', 
+        path: 'login',
         component: LoginComponent,
         title: 'Login'
     },
@@ -37,5 +37,10 @@ export const routes: Routes = [
         path: 'cliente-cadastro',
         component: ClienteFormComponent,
         title: 'Cadastro Clientes'
+    },
+    { 
+        path: 'admin-clientes-editar/:id', 
+        component: ClienteFormComponent,
+        title: 'Editar Cliente'
     }
 ];

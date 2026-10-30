@@ -33,6 +33,20 @@
       "dataNascimento": "2026-10-01",
       "senha": "xinmgPWYgQMgY3y",
       "id": "SWK7VNw"
+    },
+    {
+      "id": "UZLHRNC",
+      "nome": "Zé",
+      "sobrenome": "Mané",
+      "email": "zemanezin@email.com",
+      "senha": "4444"
+    },
+    {
+      "nome": "Calebi",
+      "sobrenome": "Lindo e Gostoso",
+      "dataNascimento": "2005-11-15",
+      "senha": "caleb",
+      "id": "3CzF_8Z"
     }
   ]
 }
